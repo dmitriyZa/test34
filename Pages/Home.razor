@@ -1,7 +1,195 @@
 ﻿@page "/"
 
-<PageTitle>Home</PageTitle>
+<div class="mentor-landing">
+    <!-- Шапка / Навигация -->
+    <header class="main-header">
+        <div class="container header-wrap">
+            <div class="logo">Дмитрий<span>.</span>NET</div>
+            <nav class="nav-links">
+                <a href="#about">Обо мне</a>
+                <a href="#consultation">Консультация</a>
+                <a href="#technologies">Стек</a>
+                <a href="#courses">Программы</a>
+                <a href="https://t.me" target="_blank" class="btn-primary-sm">Написать мне</a>
+            </nav>
+        </div>
+    </header>
 
-<h1>Hello, world!</h1>
+    <!-- Главный баннер (Hero Section) -->
+    <section class="hero-section">
+        <div class="container hero-wrap">
+            <div class="hero-content">
+                <span class="top-badge">Практикующий C# разработчик</span>
+                <h1 class="hero-title">Ворвись в IT и пройди <br />путь до <span>Junior C# / .NET</span> быстрее</h1>
+                <p class="hero-text">Привет! Меня зовут Дмитрий. Я помогаю новичкам не утонуть в тоннах информации,
+                    разложить всё по полочкам и составить четкий план обучения без лишней воды.</p>
+                    <div class="hero-actions">
+                        <a href="#consultation" class="btn-primary">Записаться на созвон</a>
+                        <a href="#courses" class="btn-secondary">Посмотреть курсы</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="avatar-circle">
+                        <img src="./sample-data/ava.jpeg" alt="Дмитрий - C# Ментор" class="avatar-img" />
+                    </div>
+                </div>
+            </div>
+        </section>
 
-Welcome to your new app.
+        <!-- Секция "Как проходит менторство" -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2 class="section-title">Никакой скучной лекционной душноты</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="icon">🤝</div>
+                        <h3>Общение на равных</h3>
+                        <p>Я прекрасно помню, как тяжело начинать. Мы разбираем твои конкретные кейсы в дружеской атмосфере.
+                        </p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="icon">🔍</div>
+                        <h3>Разбор кода</h3>
+                        <p>Ковыряем твой текущий код (если есть), подсвечиваем «слепые зоны» и учимся писать как в
+                            коммерческой разработке.</p>
+                        </div>
+                        <div class="benefit-card">
+                            <div class="icon">💼</div>
+                            <h3>Реальные требования</h3>
+                            <p>Расскажу, за что сейчас действительно платят деньги и что требуют на собеседованиях.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Секция "Бесплатная консультация" -->
+            <section id="consultation" class="consult-section">
+                <div class="container">
+                    <div class="consult-wrap">
+                        <div class="consult-badge">Первый шаг бесплатно</div>
+                        <h2 class="consult-title">What мы сделаем на бесплатной консультации:</h2>
+                        <ul class="consult-list">
+                            <li><span class="emoji">🎯</span>
+                                <div><strong>Разложим всё по полочкам:</strong> отвечу на твои вопросы и разберу текущие затыки.
+                                </div>
+                            </li>
+                            <li><span class="emoji">🗺️</span>
+                                <div><strong>Построим четкий трек:</strong> составим пошаговый личный план обучения (road map)
+                                    под твои цели.</div>
+                                </li>
+                                <li><span class="emoji">⚙️</span>
+                                    <div><strong>Наметим шаги:</strong> определим конкретные действия для твоего карьерного старта.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Секция "Стек технологий" -->
+                <section id="technologies" class="tech-section">
+                    <div class="container">
+                        <h2 class="section-title">Технологии, с которыми мы работаем</h2>
+                        <p class="section-subtitle">Мой стек — это база актуальной коммерческой разработки:</p>
+                        <div class="tech-tags">
+                            @foreach (var tech in Technologies)
+                            {
+                                <span class="tech-tag">@tech</span>
+                            }
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Секция "Курсы" -->
+                <section id="courses" class="courses-section">
+                    <div class="container">
+                        <h2 class="section-title">Углубленные программы обучения</h2>
+                        <div class="courses-grid">
+                            @foreach (var course in Courses)
+                            {
+                                <div class="course-card">
+                                    <div class="course-badge">@course.Level</div>
+                                    <div class="course-content">
+                                        <h3>@course.Title</h3>
+                                        <p class="course-desc">@course.Description</p>
+                            
+                                        <div class="course-program">
+                                            <h4>Ключевые навыки курса:</h4>
+                                            <ul>
+                                                @foreach (var topic in course.Topics)
+                                                {
+                                                    <li>@topic</li>
+                                                }
+                                            </ul>
+                                        </div>
+                            
+                                        <div class="course-footer">
+                                            <div class="course-duration">⏳ @course.Duration</div>
+                                            <a href="https://t.me" target="_blank" class="btn-course">Хочу на курс</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Блок контактов -->
+                <section id="contact" class="contact-section">
+                    <div class="container contact-wrap">
+                        <h2>Не откладывай старт на потом!</h2>
+                        <p>Напиши мне прямо сейчас. Расскажи в двух словах: какой у тебя уровень и к чему хочешь прийти. Выберем
+                            время и созвонимся.</p>
+                            <div class="contact-links">
+                                <a href="https://t.me" target="_blank" class="contact-btn tg">Написать в Telegram</a>
+                                <a href="mailto:dzagariy@gmail.com" class="contact-btn mail">Отправить Email</a>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Футер -->
+                    <footer class="main-footer">
+                        <div class="container">
+                            <p>&copy; @DateTime.Now.Year Дмитрий .NET Mentor. Разработано на Blazor WASM.</p>
+                        </div>
+                    </footer>
+                </div>
+
+@code {
+    private List<string> Technologies = new()
+    {
+        "C# / .NET", "ASP.NET Core", "Blazor", "MVC",
+        "PostgreSQL", "MSSQL", "SQLite",
+        "Проектирование API", "Микросервисы",
+        "WPF", "WinForms", "Docker", "Git"
+    };
+
+    private List<CourseModel> Courses = new()
+    {
+        new CourseModel
+        {
+            Title = "Десктопная разработка: WPF & WinForms",
+            Description = "Разработка полноценного софта под Windows. Упор на чистую архитектуру, паттерн MVVM и кастомный UI.",
+            Level = "Desktop",
+            Duration = "индивидуально",
+            Topics = new List<string> { "Создание интерфейсов на XAML и WinForms", "Привязка данных и паттерн MVVM", "Работа с локальными БД (SQLite / MSSQL)", "Интеграция сторонних библиотек" }
+        },
+        new CourseModel
+        {
+            Title = "Backend & Web: ASP.NET Core & Blazor",
+            Description = "Создание современных веб-приложений и масштабируемых API. Научимся автоматизировать бизнес и строить микросервисы.",
+            Level = "Web / Backend",
+            Duration = "индивидуально",
+            Topics = new List<string> { "Проектирование REST API и работа с Middleware", "Blazor WASM / Server компоненты", "Работа с реляционными базами через EF Core", "Контейнеризация приложений в Docker" }
+        }
+    };
+
+    public class CourseModel
+    {
+        public string Title { get; set; } = string.Empty;
+        public string Description { get; set; } = string.Empty;
+        public string Level { get; set; } = string.Empty;
+        public string Duration { get; set; } = string.Empty;
+        public List<string> Topics { get; set; } = new();
+    }
+}

@@ -1,0 +1,571 @@
+/* Базовые настройки для всего лендинга */
+.mentor-landing {
+    background-color: #0f172a;
+    color: #f8fafc;
+    min-height: 100vh;
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Глобальный сброс отступов внутри нашего компонента */
+.mentor-landing *,
+.mentor-landing h1,
+.mentor-landing h2,
+.mentor-landing h3,
+.mentor-landing h4 {
+    color: #f8fafc;
+    outline: none !important;
+    /* Убирает контур/рамку при клике или фокусе */
+    border: none !important;
+    /* На всякий случай отключаем любые рамки */
+}
+
+.mentor-landing p,
+.mentor-landing a,
+.mentor-landing span {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.mentor-landing h1,
+.mentor-landing h2,
+.mentor-landing h3,
+.mentor-landing h4 {
+    color: #f8fafc;
+}
+
+.mentor-landing p {
+    color: #94a3b8;
+}
+
+.mentor-landing .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+/* Шапка / Навигация */
+.mentor-landing .main-header {
+    background: rgba(15, 23, 42, 0.9);
+    backdrop-filter: blur(12px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    border-bottom: 1px solid #334155;
+}
+
+.mentor-landing .header-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.mentor-landing .logo {
+    font-size: 22px;
+    font-weight: 800;
+    color: #f8fafc;
+}
+
+.mentor-landing .logo span {
+    color: #38bdf8;
+}
+
+.mentor-landing .nav-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    margin-left: 25px;
+    transition: 0.3s;
+    font-size: 15px;
+}
+
+.mentor-landing .nav-links a:hover {
+    color: #38bdf8;
+}
+
+/* ГРУППА КНОПОК (Общие блочные стили и сочные отступы) */
+.mentor-landing .btn-primary,
+.mentor-landing .btn-secondary,
+.mentor-landing .contact-btn {
+    display: inline-block;
+    padding: 18px 44px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 17px;
+    text-decoration: none;
+    transition: all 0.25s ease-in-out;
+    text-align: center;
+    cursor: pointer;
+    line-height: 1.2;
+}
+
+/* Маленькая кнопка в шапке (Написать мне) */
+.mentor-landing .btn-primary-sm {
+    display: inline-block;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    margin-left: 25px;
+    background: #38bdf8;
+    color: #000000 !important;
+    transition: all 0.2s;
+}
+
+.mentor-landing .btn-primary-sm:hover {
+    background: #0ea5e9;
+    transform: translateY(-1px);
+}
+
+/* Стилизация конкретных типов кнопок */
+.mentor-landing .btn-primary {
+    background: #38bdf8;
+    color: #000000;
+}
+
+.mentor-landing .btn-primary:hover {
+    background: #0ea5e9;
+    transform: translateY(-4px);
+    box-shadow: 0 12px 20px -3px rgba(56, 189, 248, 0.35);
+}
+
+.mentor-landing .btn-secondary {
+    border: 2px solid #334155;
+    color: #f8fafc;
+    margin-left: 15px;
+    background: transparent;
+}
+
+.mentor-landing .btn-secondary:hover {
+    background: #1e293b;
+    border-color: #475569;
+    transform: translateY(-4px);
+}
+
+/* Кнопка внутри карточки курса */
+.mentor-landing .btn-course {
+    display: inline-block;
+    background: #334155;
+    color: #f8fafc;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 14px 28px;
+    border-radius: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    transition: all 0.2s;
+}
+
+.mentor-landing .btn-course:hover {
+    background: #38bdf8;
+    color: #000000;
+    transform: translateY(-2px);
+}
+
+/* Главный баннер (Hero Section) */
+.mentor-landing .hero-section {
+    padding: 160px 0 100px;
+}
+
+.mentor-landing .hero-wrap {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.mentor-landing .hero-content {
+    flex: 1;
+}
+
+.mentor-landing .top-badge {
+    background: rgba(56, 189, 248, 0.1);
+    color: #38bdf8;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.mentor-landing .hero-title {
+    font-size: 44px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    outline: none;
+    border: none;
+}
+
+
+.mentor-landing .hero-title span {
+    color: #38bdf8;
+}
+
+.mentor-landing .hero-text {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+
+.mentor-landing .hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.mentor-landing .avatar-circle {
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    border: 2px dashed #334155;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: #38bdf8;
+    font-family: monospace;
+}
+
+.mentor-landing .avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Фотография автоматически масштабируется и обрезается по кругу без искажений */
+    border-radius: 50%;
+}
+
+/* Заголовки секций */
+.mentor-landing .section-title {
+    text-align: center;
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+.mentor-landing .section-subtitle {
+    text-align: center;
+    color: #94a3b8;
+    margin-top: -40px;
+    margin-bottom: 40px;
+    font-size: 18px;
+}
+
+/* Секция "Обо мне" */
+.mentor-landing .about-section {
+    padding: 80px 0;
+    background: #0b111e;
+}
+
+.mentor-landing .benefits-grid {
+    display: flex;
+    gap: 30px;
+}
+
+.mentor-landing .benefit-card {
+    flex: 1;
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #334155;
+}
+
+.mentor-landing .benefit-card .icon {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.mentor-landing .benefit-card h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+/* Секция бесплатной консультации */
+.mentor-landing .consult-section {
+    padding: 80px 0;
+}
+
+.mentor-landing .consult-wrap {
+    max-width: 800px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    padding: 40px;
+    border-radius: 16px;
+    border: 1px solid #334155;
+    position: relative;
+}
+
+.mentor-landing .consult-badge {
+    position: absolute;
+    top: -15px;
+    left: 40px;
+    background: #10b981;
+    color: #000000;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 6px 16px;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+.mentor-landing .consult-title {
+    font-size: 26px;
+    margin-bottom: 25px;
+    margin-top: 10px;
+}
+
+.mentor-landing .consult-list {
+    list-style: none;
+}
+
+.mentor-landing .consult-list li {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #cbd5e1;
+    display: flex;
+    align-items: flex-start;
+}
+
+.mentor-landing .consult-list .emoji {
+    margin-right: 15px;
+    font-size: 20px;
+}
+
+/* Секция технологий (Стек) */
+.mentor-landing .tech-section {
+    padding: 80px 0;
+    background: #0b111e;
+}
+
+.mentor-landing .tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.mentor-landing .tech-tag {
+    background: #0f172a;
+    border: 1px solid #334155;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 15px;
+    color: #f8fafc;
+}
+
+/* Секция Курсов */
+.mentor-landing .courses-section {
+    padding: 80px 0;
+}
+
+.mentor-landing .courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 30px;
+}
+
+.mentor-landing .course-card {
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.mentor-landing .course-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(56, 189, 248, 0.1);
+    color: #38bdf8;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 20px;
+    border: 1px solid #38bdf8;
+}
+
+.mentor-landing .course-content {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.mentor-landing .course-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    padding-right: 100px;
+}
+
+.mentor-landing .course-desc {
+    color: #94a3b8;
+    margin-bottom: 25px;
+    line-height: 1.5;
+    font-size: 15px;
+}
+
+.mentor-landing .course-program {
+    margin-bottom: 30px;
+    flex-grow: 1;
+}
+
+.mentor-landing .course-program h4 {
+    font-size: 16px;
+    margin-bottom: 12px;
+    color: #38bdf8;
+}
+
+.mentor-landing .course-program ul {
+    list-style: none;
+}
+
+.mentor-landing .course-program li {
+    margin-bottom: 8px;
+    color: #cbd5e1;
+    font-size: 15px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.mentor-landing .course-program li::before {
+    content: "✓";
+    color: #10b981;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.mentor-landing .course-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #334155;
+    padding-top: 20px;
+}
+
+.mentor-landing .course-duration {
+    font-weight: 500;
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+/* Секция Контактов */
+.mentor-landing .contact-section {
+    padding: 100px 0;
+    text-align: center;
+    background: #0b111e;
+}
+
+.mentor-landing .contact-wrap h2 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.mentor-landing .contact-wrap p {
+    color: #94a3b8;
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto 35px;
+    line-height: 1.6;
+}
+
+.mentor-landing .contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.mentor-landing .contact-btn.tg {
+    background: #24A1DE;
+    color: #ffffff;
+}
+
+.mentor-landing .contact-btn.tg:hover {
+    background: #1d82b3;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px -3px rgba(36, 161, 222, 0.3);
+}
+
+.mentor-landing .contact-btn.mail {
+    background: #475569;
+    color: #ffffff;
+}
+
+.mentor-landing .contact-btn.mail:hover {
+    background: #334155;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px -3px rgba(71, 85, 105, 0.3);
+}
+
+/* Подвал */
+.mentor-landing .main-footer {
+    padding: 30px 0;
+    border-top: 1px solid #334155;
+    text-align: center;
+    font-size: 14px;
+    background: #0f172a;
+    color: #94a3b8;
+}
+
+/* Адаптивность для мобильных экранов */
+@media (max-width: 768px) {
+    .mentor-landing .hero-wrap {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .mentor-landing .hero-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+        width: 100%;
+    }
+
+    .mentor-landing .btn-secondary {
+        margin-left: 0;
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .mentor-landing .btn-primary {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .mentor-landing .benefits-grid {
+        flex-direction: column;
+    }
+
+    .mentor-landing .courses-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mentor-landing .nav-links {
+        display: none;
+    }
+
+    .mentor-landing .contact-links {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .mentor-landing .contact-btn {
+        width: 100%;
+        max-width: 280px;
+    }
+}
